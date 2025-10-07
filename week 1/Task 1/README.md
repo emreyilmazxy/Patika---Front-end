@@ -124,6 +124,6 @@ Task 1/
 
 
 **Proje Geliştirici**: Emre Yılmaz  
-**Tarih**: Ocak 2025  
+**Tarih**: Ekim 2025  
 **Eğitim Programı**: Patika+ Front-End Bootcamp  
 **Ödev**: Week 1 - Task 1
