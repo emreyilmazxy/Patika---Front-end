@@ -85,12 +85,6 @@ Tüm görseller [Lorem Picsum](https://picsum.photos/) servisinden dinamik olara
 - [JavaScript.info](https://javascript.info/) - Kapsamlı JavaScript rehberi
 - [FreeCodecamp](https://www.freecodecamp.org/) - Ücretsiz coding bootcamp
 
-## 📱 Responsive Özellikler
-
-- **Responsive görseller**: max-width: 600px
-- **Merkezi düzen**: Container ile sayfa merkezde
-- **Mobile-friendly**: Viewport meta tag ile mobile optimizasyon
-
 ## 🚀 Nasıl Çalıştırılır
 
 1. `index.html` dosyasını herhangi bir web tarayıcısında açın
@@ -144,6 +138,6 @@ Tüm görseller [Lorem Picsum](https://picsum.photos/) servisinden dinamik olara
 ---
 
 **Proje Geliştirici**: Emre Yılmaz  
-**Tarih**: Ocak 2025  
+**Tarih**: Ekim 2025  
 **Eğitim Programı**: Patika+ Front-End Bootcamp  
 **Ödev**: Week 1 - Task 2 (Blog Sayfası)
