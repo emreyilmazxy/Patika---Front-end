@@ -81,12 +81,6 @@ Task 1/
 - **Responsive**: Mobile-first yaklaşım
 - **Spacing**: Tutarlı margin ve padding değerleri
 
-## 📱 Responsive Özellikler
-
-- **Desktop**: Optimum görünüm
-- **Tablet**: Flexbox düzeni korunur
-- **Mobile**: Header dikey düzen, stack layout
-
 ## 🔗 Bağlantılar
 
 - **GitHub**: [emreyilmazxy](https://github.com/emreyilmazxy)
@@ -127,15 +121,7 @@ Task 1/
 - **Performance**: Minimal CSS, optimize edilmiş görseller
 - **Maintainability**: Temiz kod yapısı ve yorumlar
 
-## 📝 To-Do / Gelecek Geliştirmeler
 
-- [ ] JavaScript etkileşimleri
-- [ ] Dark mode toggle
-- [ ] Animasyonlar ve transitions
-- [ ] Form validation
-- [ ] Progressive Web App (PWA) özellikleri
-
----
 
 **Proje Geliştirici**: Emre Yılmaz  
 **Tarih**: Ocak 2025  
