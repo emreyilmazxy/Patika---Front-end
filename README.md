@@ -12,7 +12,7 @@ Tüm çalışmalar, front-end teknolojilerini adım adım öğrenme sürecimi ya
 - **CSS3 / SCSS**  
 - **Bootstrap 5**  
 - **Tailwind CSS**  
-- **UI / UX **  
+- **UI / UX**  
 
 ### ⚙️ 2. JavaScript & Dinamik Yapılar
 - **Event Handling (Olay Yönetimi)**  
