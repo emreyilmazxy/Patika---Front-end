@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form</title>
+</head>
+
+<body>
+    <section class="form container">
+        <div class="form__wrapper">
+            <h1 class="form__title">Survey Form For CSS Pratice</h1>
+            <div class="form__inner">
+                <fieldset class="form__fieldset">
+                    <legend>Full Name</legend>
+                    <div class="form__input-name">
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                </fieldset>
+                <div class="form__input-email">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="form__input-age">
+                    <input type="number" id="age" name="age" required min="1" max="120" placeholder="Age">
+                </div>
+                <div class="form__input-select">
+                    <select id="country" name="country">
+                        <option value="tr">Türkiye</option>
+                        <option value="us">ABD</option>
+                        <option value="de">Almanya</option>
+                    </select>
+                </div>
+                <div class="form__subtitle">
+                    <h2>
+                        where did you hear about us?
+                    </h2>
+                </div>
+                <div class="form__input-radio">
+                    <label for="Instagram">
+                        <input type="radio" id="Instagram" name="source" value="Instagram">
+                        Instagram
+                    </label>
+                    <label for="LinkedIn">
+                        <input type="radio" id="LinkedIn" name="source" value="LinkedIn">
+                        LinkedIn
+                    </label>
+                </div>
+                <div class="form__input-checkbox">
+                    <label for="Service">
+                        <input type="checkbox" id="Service" name="interest" value="frontend">
+                        Terms Of Service
+                    </label>
+                    <label for="Subscribe">
+                        <input type="checkbox" id="Subscribe" name="interest" value="backend">
+                        Subscribe for News
+                    </label>
+                </div>
+                <div class="form__input-textarea">
+                    <textarea id="comments" name="comments" rows="4" cols="50"
+                        placeholder="Your Comments..."></textarea>
+                </div>
+                <div class="form__button">
+                    <button type="submit" id="submit" class="form__submit-button">Sign Up</button>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>
+<div class="form__input-select"></div>

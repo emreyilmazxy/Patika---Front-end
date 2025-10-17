@@ -1,0 +1,260 @@
+:root {
+    --clr--font: #C2CFE0;
+    --clr--border: #5BCBBF;
+    --clr--background: #9F405B;
+    --clr--div: #34475E;
+}
+
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    color: var(--clr--font);
+    display: flex;
+    justify-content: center;
+}
+
+/* Form Wrapper */
+.form__wrapper {
+    background-color: var(--clr--background);
+    border-radius: 8px;
+    width: 50%;
+    min-height: 37.5rem;
+    text-align: center;
+    padding: 4rem;
+}
+
+.form__title {
+    max-width: 25ch;
+    margin: 0.5rem auto 0;
+}
+
+/* Form Inner */
+.form__inner {
+    background-color: var(--clr--div);
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-radius: 8px;
+}
+
+/* Form Elements - Common Styles */
+.form__inner input,
+.form__inner textarea,
+.form__inner select {
+    background-color: var(--clr--div);
+    color: var(--clr--font);
+    border: 1px solid var(--clr--border);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.form__inner input:focus,
+.form__inner textarea:focus,
+.form__inner select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--clr--font);
+    opacity: 0.7;
+}
+
+/* Form Inputs */
+.form__fieldset,
+.form__input-email,
+.form__input-age {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form__fieldset {
+    border: 1px solid var(--clr--border);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    text-align: left;
+}
+
+.form__fieldset legend {
+    padding: 0 0.5rem;
+}
+
+.form__input-name input {
+    width: 100%;
+    border: none;
+}
+
+.form__input-email input,
+.form__input-age input {
+    width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Select */
+.form__input-select {
+    border-bottom: 1px solid var(--clr--border);
+    padding: 0.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form__input-select select {
+    width: 100%;
+    border: none;
+    color: var(--clr--border);
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Subtitle */
+.form__subtitle {
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: -1rem;
+}
+
+.form__subtitle h2 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Radio Buttons */
+.form__input-radio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-left: 2rem;
+}
+
+.form__input-radio label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form__input-radio input[type="radio"] {
+    margin: 0;
+}
+
+/* Checkboxes */
+.form__input-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.form__input-checkbox label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 0.5rem;
+    max-width: 12ch;
+}
+
+.form__input-checkbox input[type="checkbox"] {
+    margin: 0;
+    margin-top: 0.25rem;
+}
+
+/* Textarea */
+.form__input-textarea {
+    padding-bottom: 1rem;
+}
+
+.form__input-textarea textarea {
+    width: 90%;
+    height: 4.375rem;
+    resize: none;
+    color: var(--clr--font);
+    padding: 0.5rem 0;
+}
+
+/* Button */
+.form__button {
+    margin-bottom: 2rem;
+}
+
+.form__button button {
+    background-color: transparent;
+    color: var(--clr--font);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.form__button button:hover {
+    background-color: var(--clr--border);
+    color: var(--clr--div);
+}
