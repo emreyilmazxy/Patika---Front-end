@@ -22,9 +22,9 @@ Viktor E. Frankl’ın yaşamı, eserleri ve mirasını öne çıkaran tek sayfa
 
 ## Ekran Görüntüleri
 
-![Ana Bölüm](/img/1.png)
-![Biyografi](/IMG/2.png)
-![Kitaplar](/IMG/3.png)
+![Ana Bölüm](./img/1.png)
+![Biyografi](./IMG/2.png)
+![Kitaplar](./IMG/3.png)
 
 ## Öne Çıkan Bölümler
 
