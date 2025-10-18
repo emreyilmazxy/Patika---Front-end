@@ -109,8 +109,7 @@
     justify-items: center;
 }
 
-
-.book {
+.books__item {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -119,32 +118,30 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.book:hover {
+.books__item:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-
-.books img {
+.books__img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin: 0 auto 1rem;
 }
 
-
-.book__name {
+.books__name {
     font-size: 1.3rem;
     color: var(--clr-accent);
     margin-bottom: 0.8rem;
 }
 
-
-.book__desc {
+.books__desc {
     font-size: 1rem;
     color: var(--clr-font);
     line-height: 1.6;
 }
+
 
 /* footer */
 .footer {
