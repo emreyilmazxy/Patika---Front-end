@@ -1,7 +1,6 @@
 # Viktor E. Frankl Tribute Website
 
-Viktor E. Frankl’ın yaşamı, eserleri ve mirasını öne çıkaran tek sayfalık anma sitesi. Eğitim amaçlı hazırlanmıştır; responsive davranış içermemektedir.
-
+Viktor E. Frankl’ın yaşamı, eserleri ve mirasını öne çıkaran tek sayfalık anma sitesi. Eğitim amaçlı hazırlanmıştır.
 ## İçerik
 
 - [Genel Bakış](#genel-bakış)
@@ -23,11 +22,9 @@ Viktor E. Frankl’ın yaşamı, eserleri ve mirasını öne çıkaran tek sayfa
 
 ## Ekran Görüntüleri
 
-> Not: Dosya isimlerini `img` klasöründeki gerçek ekran görüntülerinize göre güncelleyiniz.
-
-![Ana Bölüm](../IMG/1.png)
-![Biyografi](./img/screenshot-info.png)
-![Kitaplar](./img/screenshot-books.png)
+![Ana Bölüm](/IMG/1.png)
+![Biyografi](/IMG/2.png)
+![Kitaplar](/IMG/3.png)
 
 ## Öne Çıkan Bölümler
 
