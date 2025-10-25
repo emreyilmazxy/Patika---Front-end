@@ -1,0 +1,57 @@
+body {
+    background-color: #F4F2EE;
+}
+
+.search-bar {
+    max-width: 280px;
+    margin: 0 1rem;
+}
+
+.search-bar input {
+    background-image: url(/img/search.svg);
+    background-repeat: no-repeat;
+    background-position: .625rem center;
+    padding-left: 2.5rem;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links .navbar-nav {
+    gap: 1rem;
+}
+
+.nav-links img:not(.profile-image) {
+    filter: invert(41%) sepia(0%) saturate(0%) hue-rotate(182deg) brightness(96%) contrast(92%);
+    transition: filter 0.3s ease;
+}
+
+.nav-link:hover img:not(.profile-image) {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.nav-link:hover span {
+    text-decoration: underline;
+}
+
+.nav-divider {
+    height: 100%;
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    align-self: stretch;
+}
