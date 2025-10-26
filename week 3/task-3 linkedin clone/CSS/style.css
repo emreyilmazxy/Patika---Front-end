@@ -78,15 +78,21 @@ body {
 .card-1 {
     position: relative;
     box-shadow: 0 -8px 0 -4px rgba(249, 201, 130, 1);
+    max-height: 17.875rem;
+    min-width: 13.1875rem;
+    overflow: hidden;
+
 
 }
 
 .profile-image-2 {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 5%;
     object-fit: cover;
 }
+
+
 
 .card-2 .card-body .d-flex {
     width: 100%;
