@@ -11,7 +11,7 @@ Bu depo, Patika Front-end eğitiminin Tailwind CSS pratik ödevi için hazırlan
 ## Kullanılan Teknolojiler
 
 - HTML5
-- Tailwind CSS (CDN üzerinden üretilmiş `dist/output.css`)
+- Tailwind CSS 
 
 ## Kurulum
 
