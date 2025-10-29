@@ -1,0 +1,34 @@
+# Bağımlılık klasörleri
+node_modules/
+
+# Paket kilit dosyaları
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Derleme ve çıktı klasörleri
+dist/
+build/
+.next/
+out/
+coverage/
+*.log
+
+# Geçici dosyalar
+*.tmp
+*.temp
+*.swp
+
+# Çevresel değişken dosyaları
+.env
+.env.*
+
+# IDE / Editör ayarları
+.vscode/
+.idea/
+*.code-workspace
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+desktop.ini
