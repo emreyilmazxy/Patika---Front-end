@@ -28,9 +28,9 @@ Bu proje, Patika Front-end eğitimi kapsamında Tailwind CSS pratiği için haz�
 ## Ekran Görüntüleri
 
 <div align="center" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-  <img src="/src/img/1.png" alt="TailwindCSS Review Page hero bölümü" />
-  <img src="/src/img/2.png" alt="TailwindCSS Review Page içerik kartları" />
-  <img src="/src/img/3.png" alt="TailwindCSS Review Page değerlendirme bölümü" />
+  <img src="./src/img/1.png" alt="TailwindCSS Review Page hero bölümü" />
+  <img src="./src/img/2.png" alt="TailwindCSS Review Page içerik kartları" />
+  <img src="./src/img/3.png" alt="TailwindCSS Review Page değerlendirme bölümü" />
 </div>
 
 ## Katkı
