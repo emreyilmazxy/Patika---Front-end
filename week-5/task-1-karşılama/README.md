@@ -19,7 +19,7 @@ Patika Frontend eğitimindeki ilk JavaScript ödevinde, kullanıcıdan alınan i
 - `img/Ekran görüntüsü.png`: Uygulamanın arayüzüne ait örnek ekran görüntüsü.
 
 ## Ekran Görüntüsü
-![Uygulama ekran görüntüsü](img/Ekran%20görüntüsü.png)
+
 
 ## Kullanılan Teknolojiler
 - HTML5
