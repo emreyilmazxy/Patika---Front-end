@@ -57,3 +57,6 @@ Tarayıcı üzerinden basit bir davul seti çalmanızı sağlayan JavaScript öd
 - Ses dosyaları `.wav` formatındadır ve tarayıcıda sorunsuz çalışması için yerel dosya yolundan yüklenir.
 - `app.js` dosyasında `keydown` ve `click` olayları dinlenerek aynı işlevi paylaşır; ek geliştirmeler için bu olay yöneticisinden faydalanabilirsiniz.
 - Stil dosyasında temel bir karanlık tema kullanılmıştır; renk paletini ihtiyaçlarınıza göre güncelleyebilirsiniz.
+
+## Ekran Görüntüsü
+![Drum Kit arayüzü](assets/img/drumkit%20ekran.png)
