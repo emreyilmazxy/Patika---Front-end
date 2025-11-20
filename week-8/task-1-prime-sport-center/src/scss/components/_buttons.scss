@@ -1,0 +1,27 @@
+// Button styles
+@use '../utils/variables' as *;
+
+.btn {
+    padding: $spacing-sm $spacing-md;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &--primary {
+        background-color: $primary-color;
+        color: $background-color;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &--secondary {
+        background-color: $secondary-color;
+        color: $background-color;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}

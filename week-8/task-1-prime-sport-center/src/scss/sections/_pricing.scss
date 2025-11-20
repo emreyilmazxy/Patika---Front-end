@@ -1,0 +1,21 @@
+// Pricing section styles
+@use '../utils/variables' as *;
+
+.pricing {
+    padding: $spacing-xl 0;
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: $spacing-lg;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: $spacing-md;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-md;
+    }
+}
