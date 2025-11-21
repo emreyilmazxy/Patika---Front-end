@@ -1,27 +1,27 @@
 // Navbar component placeholder
-export class Navbar {
-    private element: HTMLElement;
+const navbarRoot = document.getElementById('navbar');
 
-    constructor() {
-        this.element = document.createElement('nav');
-        this.element.id = 'navbar';
-        this.element.className = 'navbar';
-    }
+if (navbarRoot) {
+  navbarRoot.innerHTML = `
+<nav class="navbar">
+      <div class="navbar__container">
+      <div class="navbar__logo"><span class="material-symbols-outlined">
+          sports_gymnastics
+        </span>PrimeSport</div>
 
-    render(): HTMLElement {
-        this.element.innerHTML = `
-      <div class="navbar__brand">Prime Sport Center</div>
       <ul class="navbar__links">
-        <li><a href="#hero">Hero</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#trainers">Trainers</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero">Ana Sayfa</a></li>
+        <li><a href="#programs">Programlar</a></li>
+        <li><a href="#trainers">Eğitmenler</a></li>
+        <li><a href="#pricing">Fiyatlar</a></li>
+        <li><a href="#contact">İletişim</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
       </ul>
-    `;
-        return this.element;
-    }
+
+      <button class="navbar__toggle">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      </div>
+    </nav>
+`;
 }

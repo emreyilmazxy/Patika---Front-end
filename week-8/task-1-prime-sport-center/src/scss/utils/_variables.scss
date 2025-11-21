@@ -1,23 +1,93 @@
-// Variables
-$primary-color: #ff6b00;
-$secondary-color: #1a1a1a;
-$text-color: #333;
-$background-color: #fff;
-$light-gray: #f5f5f5;
+/* Colors */
+$color-primary: #0d59f2;
+$color-primary-dark: #0b3fb6;
+$color-primary-light: #4c85ff;
 
-// Typography
-$font-primary: 'Roboto', sans-serif;
-$font-secondary: 'Montserrat', sans-serif;
+$color-white: #ffffff;
+$color-black: #111111;
 
-// Spacing
-$spacing-xs: 0.5rem;
-$spacing-sm: 1rem;
-$spacing-md: 2rem;
-$spacing-lg: 3rem;
-$spacing-xl: 4rem;
+$color-gray-100: #f5f7fa;
+$color-gray-200: #e4e7eb;
+$color-gray-300: #cbd2d9;
+$color-gray-400: #9aa5b1;
+$color-gray-500: #7b8794;
+$color-gray-600: #616e7c;
+$color-gray-700: #52606d;
+$color-gray-800: #3e4c59;
+$color-gray-900: #323f4b;
 
-// Breakpoints
-$breakpoint-mobile: 480px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
-$breakpoint-large: 1440px;
+$text-muted: $color-gray-600;
+
+
+/* Spacing Scale */
+/* PX → REM Spacing Scale (Token adı = PX değeri) */
+$space-0: 0rem;
+$space-4: 0.25rem;
+$space-8: 0.5rem;
+$space-12: 0.75rem;
+$space-16: 1rem;
+$space-20: 1.25rem;
+$space-24: 1.5rem;
+$space-32: 2rem;
+$space-40: 2.5rem;
+$space-48: 3rem;
+$space-56: 3.5rem;
+$space-64: 4rem;
+$space-72: 4.5rem;
+$space-80: 5rem;
+$space-96: 6rem;
+$space-128: 8rem;
+
+
+/* Border Radius */
+$radius-xs: 4px;
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-2xl: 32px;
+$radius-round: 50%;
+
+/* Shadow Scale */
+$shadow-xs: 0px 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.08);
+$shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0px 8px 16px rgba(0, 0, 0, 0.16);
+$shadow-xl: 0px 16px 32px rgba(0, 0, 0, 0.18);
+$shadow-2xl: 0px 24px 48px rgba(0, 0, 0, 0.2);
+
+/* Font Sizes (responsive clamp) */
+$fs-xs: clamp(0.75rem, 1vw, 0.85rem);
+$fs-sm: clamp(0.875rem, 1.2vw, 0.95rem);
+$fs-base: clamp(1rem, 1.5vw, 1.1rem);
+$fs-lg: clamp(1.125rem, 2vw, 1.4rem);
+$fs-xl: clamp(1.5rem, 3vw, 2rem);
+$fs-2xl: clamp(2rem, 5vw, 3rem);
+$fs-3xl: clamp(2.5rem, 7vw, 3.8rem);
+
+/* Button Tokens */
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+
+$btn-radius: $radius-md;
+
+$btn-font-weight: 600;
+
+$btn-primary-bg: $color-primary;
+$btn-primary-color: $color-white;
+
+$btn-outline-border: 2px solid $color-primary;
+$btn-outline-color: $color-primary;
+
+$btn-hover-opacity: 0.85;
+
+/* Transitions */
+$transition-fast: 150ms ease;
+$transition-normal: 250ms ease;
+$transition-slow: 400ms ease;
+
+/* Container */
+$container-max: 1200px;
+
+/* Layout */
+$navbar-height: 70px;

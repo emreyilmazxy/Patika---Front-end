@@ -1,19 +1,47 @@
-// Navbar styles
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .navbar {
-    background-color: $secondary-color;
-    color: $background-color;
-    padding: $spacing-sm $spacing-md;
+    background-color: $color-gray-100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 
-    &__brand {
-        font-size: 1.5rem;
-        font-weight: bold;
+    &__container {
+        @include container;
+        @include flex-between;
+        height: $navbar-height;
+        border-bottom: .0625rem solid $color-gray-200;
+
+        .navbar__toggle {
+            display: none;
+        }
+    }
+
+    &__logo {
+        font-size: $fs-xl;
+        font-weight: 700;
+        color: $color-primary;
+
+        & span {
+            font-size: $fs-xl;
+        }
+
     }
 
     &__links {
-        list-style: none;
-        display: flex;
-        gap: $spacing-md;
+        @include flex-center;
+        gap: $space-24;
+
+        a {
+            font-size: $fs-base;
+            font-weight: 600;
+            color: $color-gray-900;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
     }
 }

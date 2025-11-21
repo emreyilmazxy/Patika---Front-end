@@ -1,9 +1,0 @@
-// Footer styles
-@use '../utils/variables' as *;
-
-.footer {
-    background-color: $secondary-color;
-    color: $background-color;
-    padding: $spacing-lg 0;
-    text-align: center;
-}

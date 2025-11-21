@@ -1,26 +1,27 @@
-// Mixins
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@use './variables' as *;
+
+@mixin container {
+    width: 90%;
+    max-width: $container-max;
+    margin: 0 auto;
 }
 
-@mixin respond-to($breakpoint) {
-    @if $breakpoint ==mobile {
-        @media (max-width: $breakpoint-mobile) {
-            @content;
-        }
-    }
+/* Flex Utils */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    @else if $breakpoint ==tablet {
-        @media (max-width: $breakpoint-tablet) {
-            @content;
-        }
-    }
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    @else if $breakpoint ==desktop {
-        @media (max-width: $breakpoint-desktop) {
-            @content;
-        }
-    }
+/* Grid Utils */
+@mixin grid-cols($count) {
+    display: grid;
+    grid-template-columns: repeat($count, 1fr);
+    gap: $space-32;
 }

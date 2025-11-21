@@ -1,27 +1,68 @@
 // Button styles
 @use '../utils/variables' as *;
 
+/* Buttons Component */
 .btn {
-    padding: $spacing-sm $spacing-md;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: $btn-padding-y $btn-padding-x;
+    border-radius: $btn-radius;
+    font-weight: $btn-font-weight;
+    font-size: $fs-base;
+
+    cursor: pointer;
+    transition: opacity $transition-fast, transform $transition-fast;
+
+    border: none;
+    outline: none;
+
+    &:hover {
+        opacity: $btn-hover-opacity;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
 
     &--primary {
-        background-color: $primary-color;
-        color: $background-color;
+        background-color: $btn-primary-bg;
+        color: $btn-primary-color;
 
         &:hover {
-            opacity: 0.9;
+            background-color: $color-primary-dark;
+            color: $color-white;
+            opacity: 1;
+            transform: translateY(-2px);
+            box-shadow: $shadow-sm;
         }
     }
 
-    &--secondary {
-        background-color: $secondary-color;
-        color: $background-color;
+    &--outline {
+        background-color: transparent;
+        border: $btn-outline-border;
+        color: $btn-outline-color;
 
         &:hover {
-            opacity: 0.9;
+            background-color: rgba($color-primary, 0.08);
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
         }
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-primary;
+    }
+
+    &--small {
+        padding: 0.5rem 1rem;
+        font-size: $fs-sm;
+    }
+
+    &--large {
+        padding: 1rem 2rem;
+        font-size: $fs-lg;
     }
 }

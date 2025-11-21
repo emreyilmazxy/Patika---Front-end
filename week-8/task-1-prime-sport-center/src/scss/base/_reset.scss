@@ -1,31 +1,114 @@
-// Reset & Base Styles
-* {
-    margin: 0;
-    padding: 0;
+@use '../utils/variables' as *;
+/* RESET & NORMALIZE - Professional SCSS Reset */
+
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+/* 2. Default margin cleanup */
+* {
+    margin: 0;
+    padding: 0;
 }
 
+/* 3. Body defaults */
 body {
-    line-height: 1.6;
-    background-color: aqua;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #fff;
+    color: #111;
+    padding-top: 4.375rem;
 }
 
+/* 4. Remove list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 5. Links reset */
 a {
     text-decoration: none;
-    color: inherit;
+    cursor: pointer;
+    transition: color 150ms ease;
+    color: $color-gray-900;
+
+    &:hover {
+        color: $color-primary;
+    }
+
+    &:focus {
+        outline: none; //
+    }
 }
 
-img {
+
+/* 6. Images */
+img,
+picture {
     max-width: 100%;
     display: block;
 }
 
-button {
-    cursor: pointer;
+/* 7. Inputs & buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
     border: none;
     outline: none;
+    background: none;
+}
+
+/* Remove button default styling */
+button {
+    cursor: pointer;
+}
+
+/* 8. Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 9. Headings should not be bold by default (professional choice) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+/* 10. Smooth scroll for UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 11. Strong tag equalizes weight with headings */
+strong {
+    font-weight: 600;
+}
+
+/* 12. Fieldset reset */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 13. Button fix for Firefox */
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
 }

@@ -1,26 +1,72 @@
-// Hero section styles
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
 .hero {
-    min-height: 100vh;
-    @include flex-center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: $background-color;
-    text-align: center;
 
-    &__content {
-        max-width: 800px;
-        padding: $spacing-md;
+    &__container {
+        @include container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-40;
+        padding: $space-80 0;
+    }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: $spacing-md;
-        }
+    &__title {
+        font-size: $fs-3xl;
+        font-weight: 800;
+        color: $color-gray-900;
+        margin-bottom: $space-24;
+    }
 
-        p {
-            font-size: 1.25rem;
-            margin-bottom: $spacing-lg;
+    &__subtitle {
+        font-size: $fs-xl;
+        color: $text-muted;
+        margin-bottom: $space-32;
+        line-height: 1.5;
+        padding-right: $space-40;
+    }
+
+    &__button-group {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: $space-16;
+        max-width: 400px;
+        margin-bottom: $space-56;
+    }
+
+    &__features {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: $space-32;
+        margin-top: $space-40;
+        text-align: left;
+        font-size: $fs-base;
+
+        & span {
+            font-size: $fs-xl;
+            color: $color-primary;
         }
     }
+
+
+    &__image img {
+        width: 100%;
+        max-width: 60rem; // 640px  // 640px
+        border-radius: $radius-lg;
+        box-shadow: $shadow-xl;
+    }
+
+
+    &__feature-text {
+        max-width: 12rem;
+        white-space: normal;
+        font-weight: 900;
+        color: $color-gray-900;
+    }
+
+
 }
