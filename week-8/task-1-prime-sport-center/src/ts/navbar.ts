@@ -11,11 +11,11 @@ if (navbarRoot) {
 
       <ul class="navbar__links">
         <li><a href="#hero">Ana Sayfa</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
         <li><a href="#programs">Programlar</a></li>
         <li><a href="#trainers">Eğitmenler</a></li>
         <li><a href="#pricing">Fiyatlar</a></li>
         <li><a href="#contact">İletişim</a></li>
-        <li><a href="#about">Hakkımızda</a></li>
       </ul>
 
       <button class="navbar__toggle">

@@ -1,0 +1,77 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.about {
+    @include container;
+
+    &__content {
+        @include flex-between;
+        flex-wrap: wrap;
+        gap: $space-40;
+        padding: $space-80 $space-80;
+        background-color: white;
+        border-radius: $radius-lg;
+    }
+
+    &__title {
+        font-size: $fs-3xl;
+        font-weight: 800;
+        color: $color-gray-900;
+        margin-bottom: $space-24;
+    }
+
+    &__description {
+        font-size: $fs-base;
+        color: $text-muted;
+        line-height: 1.6;
+        margin-bottom: $space-40;
+    }
+
+    &__text {
+        flex: 1;
+
+    }
+
+    &__features {
+        display: flex;
+        flex-direction: column;
+        gap: $space-24;
+        margin-bottom: $space-40;
+
+        &-text {
+            display: flex;
+            align-items: center;
+            gap: $space-16;
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-primary-light;
+                padding: $space-12;
+                border-radius: $radius-round;
+                font-size: $fs-lg;
+                flex-shrink: 0;
+                color: $color-primary;
+            }
+
+            h3 {
+                font-size: $fs-lg;
+                font-weight: 700;
+                color: $color-gray-900;
+                margin: 0;
+            }
+        }
+    }
+
+
+    &__image-wrapper {
+        flex: 1;
+
+        img {
+            width: 100%;
+            border-radius: $radius-md;
+            box-shadow: $shadow-md;
+        }
+    }
+}
