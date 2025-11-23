@@ -1,50 +1,167 @@
 // Card styles
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
-/* Cards Component */
-.card {
+/* Programs Card Component */
+.card-programs {
     background-color: $color-white;
+    padding: $space-24;
     border-radius: $radius-lg;
     box-shadow: $shadow-sm;
-    padding: $space-24;
-    transition: box-shadow $transition-fast, transform $transition-fast;
+    text-align: left;
+    transition: transform $transition-fast, box-shadow $transition-fast;
 
-    &--hover {
-        &:hover {
-            box-shadow: $shadow-lg;
-            transform: translateY(-4px);
-        }
+    /* Hover effect */
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-md;
     }
 
-    &__image {
-        width: 100%;
-        height: 200px;
-        border-radius: $radius-md;
-        overflow: hidden;
+    /* Icon styling */
+    &__icon {
+        font-size: $fs-xl;
+        color: $color-primary;
         margin-bottom: $space-16;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 
+    /* Title styling */
     &__title {
         font-size: $fs-lg;
         font-weight: 700;
+        color: $text-primary;
         margin-bottom: $space-12;
-        color: $color-gray-900;
     }
 
-    &__text {
+    /* Description text */
+    &__description {
         font-size: $fs-base;
         color: $text-muted;
-        line-height: 1.5;
-        margin-bottom: $space-16;
+        line-height: 1.6;
+    }
+}
+
+/* Trainers Card Component */
+.card-trainers {
+    background-color: $color-white;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+    transition: transform $transition-fast, box-shadow $transition-fast;
+    padding: $space-24;
+    text-align: center;
+
+    /* Trainer image wrapper */
+    &__image-wrapper {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto $space-16;
+        border-radius: $radius-round;
+        overflow: hidden;
+        box-shadow: $shadow-xl;
     }
 
-    &__footer {
-        margin-top: $space-20;
+    /* Image styling */
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Hover effect */
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-md;
+    }
+
+    /* Subtitle (role/position) */
+    &__subtitle {
+        font-size: $fs-base;
+        color: $color-primary;
+        margin-bottom: $space-8;
+    }
+}
+
+/* Pricing Card Component */
+.pricing__card {
+    background-color: $color-white;
+    padding: $space-40;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    text-align: left;
+
+
+    .pricing__features {
+        margin-bottom: $space-24;
+        list-style: none;
+        padding: 0;
+
+
+
+        li {
+            font-size: $fs-base;
+            color: $text-secondary;
+            margin-bottom: $space-12;
+            display: flex;
+            align-items: center;
+            gap: $space-12;
+
+            .verified-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 22px;
+                height: 22px;
+
+                background-color: $color-primary;
+                color: $color-white;
+
+                border-radius: 6px;
+
+                font-size: 16px;
+
+                font-variation-settings:
+                    "FILL" 1,
+                    "wght" 600,
+                    "GRAD" 0,
+                    "opsz" 24;
+
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+            }
+        }
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-lg;
+    }
+
+    &--featured {
+        border: 2px solid $color-primary;
+        position: relative;
+    }
+
+    .pricing__amount {
+        span {
+            color: $color-primary;
+            font-size: $fs-2xl;
+            font-weight: 800;
+        }
+    }
+
+    .pricing__badge {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-primary;
+        color: $color-white;
+        padding: $space-8 $space-16;
+        border-radius: $radius-md;
+        font-size: $fs-sm;
+        font-weight: 700;
+        text-transform: uppercase;
+        box-shadow: $shadow-sm;
     }
 }

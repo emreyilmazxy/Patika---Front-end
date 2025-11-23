@@ -1,26 +1,33 @@
-/* Colors */
-$color-primary: #0d59f2;
-$color-primary-dark: hsl(222, 89%, 38%);
-$color-primary-light: #dfe6f5;
+/* Colors - Orange Energy Theme */
 
+/* Primary Colors */
+$color-primary: #f97316;
+$color-primary-dark: #c2410c;
+$color-primary-light: #ffedd5;
+$color-primary-soft: #fed7aa;
+
+/* Neutral Colors */
 $color-white: #ffffff;
-$color-black: #111111;
+$color-black: #0f172a;
 
-$color-gray-100: #f5f7fa;
-$color-gray-200: #e4e7eb;
-$color-gray-300: #cbd2d9;
-$color-gray-400: #9aa5b1;
-$color-gray-500: #7b8794;
-$color-gray-600: #616e7c;
-$color-gray-700: #52606d;
-$color-gray-800: #3e4c59;
-$color-gray-900: #323f4b;
+/* Gray Scale */
+$color-gray-100: #f8fafc;
+$color-gray-200: #f1f5f9;
+$color-gray-300: #e2e8f0;
+$color-gray-400: #cbd5e1;
+$color-gray-500: #94a3b8;
+$color-gray-600: #64748b;
+$color-gray-700: #475569;
+$color-gray-800: #334155;
+$color-gray-900: #1e293b;
 
-$text-muted: $color-gray-600;
-
+/* Typography Colors */
+$text-primary: #1e293b;
+$text-secondary: #334155;
+$text-muted: #64748b;
+$text-light: #94a3b8;
 
 /* Spacing Scale */
-/* PX → REM Spacing Scale (Token adı = PX değeri) */
 $space-0: 0rem;
 $space-4: 0.25rem;
 $space-8: 0.5rem;
@@ -37,7 +44,6 @@ $space-72: 4.5rem;
 $space-80: 5rem;
 $space-96: 6rem;
 $space-128: 8rem;
-
 
 /* Border Radius */
 $radius-xs: 4px;
@@ -56,7 +62,7 @@ $shadow-lg: 0px 8px 16px rgba(0, 0, 0, 0.16);
 $shadow-xl: 0px 16px 32px rgba(0, 0, 0, 0.18);
 $shadow-2xl: 0px 24px 48px rgba(0, 0, 0, 0.2);
 
-/* Font Sizes (responsive clamp) */
+/* Font Sizes */
 $fs-xs: clamp(0.75rem, 1vw, 0.85rem);
 $fs-sm: clamp(0.875rem, 1.2vw, 0.95rem);
 $fs-base: clamp(1rem, 1.5vw, 1.1rem);
@@ -68,17 +74,12 @@ $fs-3xl: clamp(2.5rem, 7vw, 3.8rem);
 /* Button Tokens */
 $btn-padding-y: 0.75rem;
 $btn-padding-x: 1.5rem;
-
 $btn-radius: $radius-md;
-
 $btn-font-weight: 600;
-
 $btn-primary-bg: $color-primary;
 $btn-primary-color: $color-white;
-
 $btn-outline-border: 2px solid $color-primary;
 $btn-outline-color: $color-primary;
-
 $btn-hover-opacity: 0.85;
 
 /* Transitions */

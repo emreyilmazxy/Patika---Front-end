@@ -16,6 +16,7 @@ if (aboutRoot) {
           </p>
 
          <div class ="about__features"> 
+         
          <div class="about__features-text">
             <span class="material-symbols-outlined !text-[28px]">groups</span>
              <h3>Uzman Eğitmen Kadrosu</h3>

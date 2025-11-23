@@ -1,8 +1,10 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
+/* Hero Section */
 .hero {
 
+    /* Container layout */
     &__container {
         @include container;
         display: flex;
@@ -12,13 +14,24 @@
         padding: $space-80 0;
     }
 
+    /* Content wrapper */
+    &__content {
+        background-color: white;
+        padding: $space-32;
+        border-radius: $radius-lg;
+        flex: 1;
+        box-shadow: $shadow-lg;
+    }
+
+    /* Main title */
     &__title {
         font-size: $fs-3xl;
         font-weight: 800;
-        color: $color-gray-900;
+        color: $text-primary;
         margin-bottom: $space-24;
     }
 
+    /* Subtitle text */
     &__subtitle {
         font-size: $fs-xl;
         color: $text-muted;
@@ -27,6 +40,7 @@
         padding-right: $space-40;
     }
 
+    /* Button group */
     &__button-group {
         display: flex;
         align-items: center;
@@ -36,6 +50,7 @@
         margin-bottom: $space-56;
     }
 
+    /* Features list */
     &__features {
         display: flex;
         align-items: center;
@@ -46,27 +61,33 @@
         text-align: left;
         font-size: $fs-base;
 
+        /* Feature icons */
         & span {
             font-size: $fs-xl;
             color: $color-primary;
         }
     }
 
+    /* Image wrapper */
+    &__image {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        max-width: 28rem;
+    }
 
+    /* Image styling */
     &__image img {
         width: 100%;
-        max-width: 60rem; // 640px  // 640px
         border-radius: $radius-lg;
         box-shadow: $shadow-xl;
     }
 
-
+    /* Feature text */
     &__feature-text {
         max-width: 12rem;
         white-space: normal;
         font-weight: 900;
-        color: $color-gray-900;
+        color: $text-primary;
     }
-
-
 }

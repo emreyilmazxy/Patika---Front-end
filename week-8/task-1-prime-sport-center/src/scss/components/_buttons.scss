@@ -3,6 +3,7 @@
 
 /* Buttons Component */
 .btn {
+    /* Base button styles */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -18,14 +19,17 @@
     border: none;
     outline: none;
 
+    /* Default hover effect */
     &:hover {
         opacity: $btn-hover-opacity;
     }
 
+    /* Active state */
     &:active {
         transform: scale(0.98);
     }
 
+    /* Primary button variant */
     &--primary {
         background-color: $btn-primary-bg;
         color: $btn-primary-color;
@@ -39,6 +43,7 @@
         }
     }
 
+    /* Outline button variant */
     &--outline {
         background-color: transparent;
         border: $btn-outline-border;
@@ -51,11 +56,13 @@
         }
     }
 
+    /* White button variant */
     &--white {
         background-color: $color-white;
         color: $color-primary;
     }
 
+    /* Size variants */
     &--small {
         padding: 0.5rem 1rem;
         font-size: $fs-sm;
@@ -64,5 +71,10 @@
     &--large {
         padding: 1rem 2rem;
         font-size: $fs-lg;
+    }
+
+    /* Full width modifier */
+    &--full {
+        width: 100%;
     }
 }
