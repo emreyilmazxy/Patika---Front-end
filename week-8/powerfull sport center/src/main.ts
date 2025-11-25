@@ -5,7 +5,6 @@ import { initStats } from "./ts/stats";
 import { initClasses } from "./ts/classes";
 import { initBMI } from "./ts/bmi";
 import { initContact } from "./ts/contact";
-import { initForm } from "./ts/form";
 import { initProducts } from "./ts/products";
 import { initTrainers } from "./ts/trainers";
 import { initReviews } from "./ts/reviews";
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initClasses();
     initBMI();
     initContact();
-    initForm();
     initProducts();
     initTrainers();
     initReviews();
