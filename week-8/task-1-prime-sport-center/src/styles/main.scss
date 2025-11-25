@@ -1,0 +1,14 @@
+// Main SCSS Entry Point
+// Import order: utils → base → components → layouts
+
+// 1. Utils (Variables, Mixins, Helpers)
+@use 'utils';
+
+// 2. Base (Reset, Typography, Base Styles)
+@use 'base';
+
+// 3. Components (Reusable UI Components)
+@use 'components';
+
+// 4. Layouts (Page Sections)
+@use 'layouts';
