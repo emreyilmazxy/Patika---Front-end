@@ -42,7 +42,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: $space-12px $space-24px;
+    padding: $space-12 $space-24;
     border-radius: $radius-md;
     font-weight: 600;
     cursor: pointer;
@@ -54,7 +54,7 @@
     background: $color-light;
     border-radius: $radius-lg;
     box-shadow: $shadow-soft;
-    padding: $space-24px;
+    padding: $space-24;
 }
 
 /* ---- Text truncate ---- */

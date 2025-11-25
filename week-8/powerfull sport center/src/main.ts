@@ -1,23 +1,12 @@
 import "./styles/main.scss";
-import { initNavbar } from "./ts/navbar";
-import { initHero } from "./ts/hero";
-import { initStats } from "./ts/stats";
-import { initClasses } from "./ts/classes";
-import { initBMI } from "./ts/bmi";
-import { initContact } from "./ts/contact";
-import { initProducts } from "./ts/products";
-import { initTrainers } from "./ts/trainers";
-import { initReviews } from "./ts/reviews";
+import "./ts/navbar";
+import "./ts/hero";
+import "./ts/stats";
+import "./ts/classes";
+import "./ts/bmi";
+import "./ts/contact";
+import "./ts/products";
+import "./ts/trainers";
+import "./ts/reviews";
 
-// Initialize all modules
-document.addEventListener("DOMContentLoaded", () => {
-    initNavbar();
-    initHero();
-    initStats();
-    initClasses();
-    initBMI();
-    initContact();
-    initProducts();
-    initTrainers();
-    initReviews();
-});
+

@@ -1,1 +1,14 @@
+@use '/src/styles/utils/mixins' as *;
 
+.navbar {
+    .logo {
+        display: flex;
+        align-items: center;
+        // gap: 8px;
+    }
+
+    .logo img {
+        width: 5.75rem;
+        height: auto;
+    }
+}
