@@ -1,1 +1,74 @@
+@use '/src/styles/utils/variables' as *;
+@use '/src/styles/utils/mixins' as *;
 
+.btn {
+    @include button-base;
+
+    &-primary {
+        background-color: $color-secondary;
+        color: $text-white;
+
+        &:hover {
+            background-color: darken($color-secondary, 10%);
+        }
+
+    }
+
+    &-secondary {
+        background-color: $color-primary;
+        color: $text-white;
+
+
+        &:hover {
+            background-color: darken($color-primary, 10%);
+        }
+    }
+
+    &-outline {
+        background-color: transparent;
+        border: 2px solid $text-white;
+        color: $text-white;
+
+        &:hover {
+            background-color: $color-secondary;
+            color: $text-white;
+        }
+    }
+
+
+}
+
+.btn-secondary-alt {
+    background-color: $color-primary;
+    color: $text-white;
+    padding: .5rem 1.25rem;
+    border-radius: $radius-sm;
+    transition: background-color .3s ease;
+    position: relative;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(-50%) scaleY(0);
+        transform-origin: center top;
+
+        width: 14px;
+        height: 8px;
+
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+        background-color: inherit;
+        transition: transform .25s ease-out;
+    }
+
+    &:hover {
+        background-color: $color-secondary;
+
+        &::after {
+            background-color: $color-secondary;
+            transform: translateX(-50%) scaleY(1);
+        }
+    }
+}

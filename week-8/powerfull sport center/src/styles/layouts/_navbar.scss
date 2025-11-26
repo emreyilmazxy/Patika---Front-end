@@ -1,14 +1,52 @@
-@use '/src/styles/utils/mixins' as *;
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
 
 .navbar {
-    .logo {
-        display: flex;
-        align-items: center;
-        // gap: 8px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $navbar-height;
+    background-color: transparent;
+    color: $text-white;
+
+    .container {
+        @include flex-between;
+
+        span {
+            display: none;
+        }
     }
 
-    .logo img {
-        width: 5.75rem;
+    &__img-wrapper {
+        max-width: 220px;
         height: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__links {
+        @include flex-center;
+        gap: $space-32;
+
+        &-item {
+            a {
+                color: $text-white;
+                font-weight: 600;
+                transition: $transition-base;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    &--scrolled {
+        background-color: #355592;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: $transition-slow;
     }
 }

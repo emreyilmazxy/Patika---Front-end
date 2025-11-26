@@ -1,1 +1,31 @@
+@use '/src/styles/utils/mixins' as *;
+@use '/src/styles/utils/variables' as *;
 
+.stats {
+
+    .container {
+        @include grid(4, 2rem);
+        align-items: center;
+        text-align: center;
+    }
+
+    &__item {
+        @include flex-column;
+        gap: $space-24;
+        background-color: #fff;
+        padding-block: $space-32;
+        border-radius: $radius-sm;
+
+
+        &-number {
+            font-size: $fs-2xl;
+            color: $color-primary;
+        }
+
+        &-text {
+            font-size: $fs-lg;
+            font-weight: 700;
+            color: $text-primary;
+        }
+    }
+}

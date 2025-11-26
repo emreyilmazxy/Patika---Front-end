@@ -1,1 +1,49 @@
+@use '/src/styles/utils/variables' as *;
+@use '/src/styles/utils/mixins' as *;
 
+.hero {
+    background-image: url(/src/assets/images/hero-man.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: $text-white;
+
+    .container {
+        @include flex-column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        text-align: left;
+    }
+
+    &__span {
+        display: inline-block;
+        padding: $space-4 $space-8;
+        background-color: $color-primary;
+        border-radius: $radius-sm;
+    }
+
+    &__title {
+        @include flex-column;
+        font-size: 10ch;
+    }
+
+
+    &__description {
+        font-size: $fs-lg;
+        font-weight: 700;
+        margin-bottom: $space-16;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        padding: $space-8 $space-12;
+        color: $text-white;
+    }
+
+    &__buttons-wrapper {
+        @include flex-center;
+        gap: $space-40;
+
+        a {
+            border-radius: $radius-sm;
+        }
+    }
+}

@@ -42,11 +42,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: $space-12 $space-24;
-    border-radius: $radius-md;
+    padding: $btn-padding-y $btn-padding-x;
+    border-radius: $radius-sm;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.25s ease;
+    transition: $transition-base;
 }
 
 /* ---- Card Base ---- */

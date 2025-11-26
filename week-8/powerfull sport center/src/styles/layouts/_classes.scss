@@ -1,1 +1,22 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
+.classes {
+
+    &__description {
+        font-size: $fs-xl;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        gap: $space-16;
+        align-items: center;
+        text-align: center;
+        margin-top: $space-64;
+
+        & button {
+            font-size: $fs-xl;
+        }
+    }
+}
