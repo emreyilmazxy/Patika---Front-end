@@ -38,7 +38,9 @@
 
 }
 
-.btn-secondary-alt {
+// our classes button style
+
+.btn-secondary-down {
     background-color: $color-primary;
     color: $text-white;
     padding: .5rem 1.25rem;
@@ -56,19 +58,32 @@
         transform-origin: center top;
 
         width: 14px;
+        transform-origin: center top;
         height: 8px;
 
         clip-path: polygon(50% 100%, 0 0, 100% 0);
-        background-color: inherit;
+        background-color: $color-secondary;
         transition: transform .25s ease-out;
+
     }
 
     &:hover {
         background-color: $color-secondary;
+    }
+
+    &:hover::after {
+        background-color: $color-secondary;
+        transform: translateX(-50%) scaleY(1);
+    }
+
+    &--active {
+        background-color: $color-secondary;
+        color: $text-white;
 
         &::after {
-            background-color: $color-secondary;
             transform: translateX(-50%) scaleY(1);
+            background-color: $color-secondary;
         }
     }
+
 }

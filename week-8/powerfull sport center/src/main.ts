@@ -8,5 +8,8 @@ import "./ts/contact";
 import "./ts/products";
 import "./ts/trainers";
 import "./ts/reviews";
+import "./ts/content/classesContentMap";
+import "./ts/functions/showContent";
+
 
 

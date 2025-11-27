@@ -28,6 +28,12 @@ svg {
     max-width: 100%;
 }
 
+*:focus {
+    outline: none;
+    background: none;
+}
+
+
 button {
     background: none;
     border: none;

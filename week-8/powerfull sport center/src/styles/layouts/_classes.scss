@@ -2,10 +2,33 @@
 @use '../utils/mixins' as *;
 
 .classes {
+    background-color: $color-white;
+    position: relative;
+    z-index: 0;
 
+    .container {
+
+        padding-inline: $space-24;
+
+        &::after {
+            content: '';
+            position: absolute;
+            clip-path: polygon(25% 0, 100% 0, 100% 100%, 50% 100%);
+            background-color: $color-gray-400;
+            top: 0;
+            left: 10%;
+            width: 90%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+    //   paragraphs 
     &__description {
         font-size: $fs-xl;
     }
+
+    //  button groups 
 
     &__buttons-wrapper {
         display: flex;
@@ -19,4 +42,48 @@
             font-size: $fs-xl;
         }
     }
+
+    //  content section start 
+    &__content {
+        @include flex-between;
+        gap: $space-64;
+        margin-top: $space-48;
+
+
+        &-title {
+            margin-bottom: $space-16;
+            font-size: $fs-3xl;
+        }
+
+        &-description {
+            font-size: $fs-lg;
+            color: $text-secondary;
+            margin-bottom: $space-32;
+            max-width: 45rem;
+            text-align: justify;
+        }
+
+        &-description--flex {
+            font-size: $fs-lg;
+            color: $text-secondary;
+            margin-bottom: $space-32;
+            @include flex-column;
+            gap: $space-12;
+            align-items: flex-start;
+
+        }
+    }
+
+    //   content image
+    &__img-wrapper {
+        max-width: 31.25rem;
+        width: 100%;
+
+        & img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
 }
