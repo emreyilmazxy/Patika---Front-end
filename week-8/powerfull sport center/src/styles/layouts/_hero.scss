@@ -25,10 +25,10 @@
 
     &__title {
         @include flex-column;
-        font-size: 10ch;
+        font-size: clamp(2rem, 7vw, 6rem);
     }
 
-
+    //paragraph styles
     &__description {
         font-size: $fs-lg;
         font-weight: 700;

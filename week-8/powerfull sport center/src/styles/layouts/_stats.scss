@@ -4,7 +4,7 @@
 .stats {
 
     .container {
-        @include grid(4, 2rem);
+        @include grid-responsive(17.25rem, $space-32);
         align-items: center;
         text-align: center;
     }
@@ -15,6 +15,7 @@
         background-color: #fff;
         padding-block: $space-32;
         border-radius: $radius-sm;
+
 
 
         &-number {

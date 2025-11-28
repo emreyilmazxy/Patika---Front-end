@@ -7,6 +7,6 @@ document.addEventListener("click", (e) => {
     const clickedButton = target.closest("button") as HTMLButtonElement | null;
 
     if (clickedButton) {
-        showContent(clickedButton);
+        showContent(clickedButton);  // Send the clicked button to the showContent function in functions/showContent.ts
     }
 });

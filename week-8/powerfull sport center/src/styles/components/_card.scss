@@ -1,1 +1,283 @@
-@use '/src/styles/utils/mixins' as *;
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+// Trainer card component with animated borders and info panel
+.trainers__card {
+    position: relative;
+    border-radius: $radius-lg;
+    border: 0.1875rem solid #e1a937; // Golden border
+    background: $color-white;
+    cursor: pointer;
+    transition: transform $transition-base;
+
+    // Hover state: lift card and show info
+    &:hover {
+        transform: translateY(-0.5rem);
+
+        .trainers__info {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        .trainers__card-border {
+            &::after {
+                width: 5.625rem; // Expand bottom border
+            }
+        }
+
+        &::before {
+            height: 5.625rem; // Expand left border
+        }
+
+        &::after {
+            height: 5.625rem; // Expand right border
+        }
+    }
+
+    // Top border line (static, no animation)
+    .trainers__card-border::before {
+        content: '';
+        position: absolute;
+        top: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5.625rem;
+        height: 0.3125rem;
+        background: #234c8a; // Navy blue
+        border-radius: 0.1875rem;
+        z-index: 2;
+    }
+
+    // Bottom border line (animated on hover)
+    .trainers__card-border::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2.8125rem;
+        height: 0.3125rem;
+        background: #234c8a;
+        border-radius: 0.1875rem;
+        transition: width $transition-base;
+        z-index: 2;
+    }
+
+    // Left border line (animated on hover)
+    &::before {
+        content: '';
+        position: absolute;
+        left: -0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.3125rem;
+        height: 2.8125rem;
+        background: #234c8a;
+        border-radius: 0.1875rem;
+        transition: height $transition-base;
+        z-index: 2;
+    }
+
+    // Right border line (animated on hover)
+    &::after {
+        content: '';
+        position: absolute;
+        right: -0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.3125rem;
+        height: 2.8125rem;
+        background: #234c8a;
+        border-radius: 0.1875rem;
+        transition: height $transition-base;
+        z-index: 2;
+    }
+}
+
+// Border container for pseudo-elements
+.trainers__card-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+// Image wrapper with aspect ratio
+.trainers__img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: $radius-lg;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+// Info panel with custom clip-path shape (slides up on hover)
+.trainers__info {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%); // Hidden by default
+    width: 85%;
+    background: #234c8a;
+    padding: $space-32 $space-20;
+    text-align: center;
+    opacity: 0;
+    transition: all $transition-base;
+    z-index: 3;
+    // Custom polygon creates narrow notches at top and bottom center
+    clip-path: polygon(0% 20%,
+            10% 20%,
+            10% 8%,
+            90% 8%,
+            90% 20%,
+            100% 20%,
+            100% 80%,
+            90% 80%,
+            90% 92%,
+            10% 92%,
+            10% 80%,
+            0% 80%);
+}
+
+// Trainer name styling
+.trainers__name {
+    color: $color-white;
+    font-size: $fs-xl;
+    font-weight: 700;
+    margin-bottom: $space-8;
+}
+
+// Trainer role/title styling
+.trainers__role {
+    color: $color-white;
+    font-size: $fs-base;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+//   product card component -------------------------------------------------------
+
+
+.products__card {
+    background: $color-white;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* IMAGE */
+    .products__img-wrapper {
+        width: 100%;
+        aspect-ratio: 3/4;
+        overflow: hidden;
+        border-bottom: 1px solid #eaeaea;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    &:hover .products__img-wrapper img {
+        transform: scale(1.05);
+    }
+
+    /* INFO SECTION */
+    .products__info {
+        padding: $space-8 $space-24 $space-24 $space-24;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: $space-8;
+    }
+
+    /* Name */
+    .products__name {
+        font-size: $fs-xl;
+        font-weight: $fw-bold;
+        color: black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Price */
+    .products__price {
+        font-size: $fs-base;
+        font-weight: 700;
+        color: black;
+
+        // Old price with strikethrough
+        .old-price {
+            text-decoration: line-through;
+            font-weight: $fw-bold;
+        }
+
+        // New price (no special styling needed, inherits from parent)
+        .new-price {
+            font-weight: $fw-bold;
+        }
+    }
+
+    /* Button - horizontal layout with icon on left, text centered */
+    button {
+        margin-top: $space-16;
+        align-self: stretch; // Make button full width
+
+        background: transparent;
+        border: none;
+        display: flex;
+        flex-direction: row; // Horizontal layout
+        align-items: center;
+        justify-content: center;
+        gap: $space-8;
+        cursor: pointer;
+        position: relative;
+
+        color: black;
+        font-size: $fs-base;
+        font-weight: 800;
+        transition: color 0.2s ease;
+
+        .material-symbols-outlined {
+            font-size: 26px;
+            transition: transform 0.2s ease;
+            position: absolute;
+            left: 0; // Icon on the left
+        }
+
+        .btn-text {
+            flex: 1;
+            text-align: center; // Text centered
+        }
+
+        &:hover {
+            color: $color-primary;
+
+            .material-symbols-outlined {
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

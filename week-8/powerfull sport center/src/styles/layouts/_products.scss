@@ -1,1 +1,12 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
+.products {
+    background: $color-white;
+
+    &__cards-wrapper {
+        margin-top: $space-48;
+        @include grid-responsive(16.25rem, $space-32);
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}

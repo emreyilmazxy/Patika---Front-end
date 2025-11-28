@@ -1,1 +1,23 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
+.trainers {
+    background-color: $color-light;
+
+    &__subtitle {
+        font-size: $fs-lg;
+        color: $text-secondary;
+        margin-top: $space-16;
+        max-width: 800px;
+        margin-inline: auto;
+    }
+
+    &__cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: $space-48;
+        margin-top: $space-64;
+        max-width: 1000px;
+        margin-inline: auto;
+    }
+}

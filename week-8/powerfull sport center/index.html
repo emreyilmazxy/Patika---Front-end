@@ -96,6 +96,7 @@
     <div class="container">
 
       <h2 class="classes__title section-title">OUR Classes</h2>
+
       <p class="classes__description text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
         distinctio quasi eos hic vero esse. Vitae eligendi itaque repellat saepe.</p>
 
@@ -109,21 +110,23 @@
       <!-- section content start here -->
       <div class="classes__content classes__active">
 
-        <div class="classes__text">
+        <div class="classes__content-wrapper">
+          <div class="classes__text">
 
-          <h3 class="classes__content-title">Why are your Yoga</h3>
-          <p class="classes__content-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptates, quod, quos, quia voluptatem quibusdam voluptate quae quidem voluptatibus quas. Quae, quasi.
-            Quisquam, quod. Quisquam, quod. Quisquam, quod. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Dolore, saepe. </p>
+            <h3 class="classes__content-title">Why are your Yoga</h3>
+            <p class="classes__content-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptates, quod, quos, quia voluptatem quibusdam voluptate quae quidem voluptatibus quas. Quae, quasi.
+              Quisquam, quod. Quisquam, quod. Quisquam, quod. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Dolore, saepe. </p>
 
-          <h3 class="classes__content-title">When comes Yoga your Time.</h3>
-          <p class="classes__content-description--flex">
-            <span>Saturday-Sunday: 10:00 AM - 11:00 AM</span>
-            <span>Monday-Wednesday: 06:00 PM - 07:00 PM</span>
-            <span>Thursday-Friday: 08:00 AM - 09:00 AM</span>
-          </p>
+            <h3 class="classes__content-title">When comes Yoga your Time.</h3>
+            <p class="classes__content-description--flex">
+              <span>Saturday-Sunday: 10:00 AM - 11:00 AM</span>
+              <span>Monday-Wednesday: 06:00 PM - 07:00 PM</span>
+              <span>Thursday-Friday: 08:00 AM - 09:00 AM</span>
+            </p>
 
+          </div>
         </div>
 
         <div class="classes__img-wrapper">
@@ -135,11 +138,179 @@
     </div>
   </section>
   <!-- classes section end here  -->
-  <section id="bmi" class="bmi"></section>
 
-  <section id="trainers" class="trainers"></section>
+  <!-- BMI Calculator Section Start Here -->
+  <section id="bmi" class="bmi">
+    <div class="container">
 
-  <section id="products" class="products"></section>
+      <div class="bmi__content-wrapper">
+        <div class="bmi__content">
+          <h2 class="bmi__title">BMI Calculator</h2>
+
+          <p class="bmi__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere libero adipisci,
+            quisquam consectetur eius, natus iusto quos laudantium eum dolorem molestias aperiam at iste animi modi
+            ullam?
+            Molestias, illum dic
+            ta.</p>
+          <p class="bmi__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere libero adipisci,
+            quisquam consectetur eius, natus iusto quos laudantium eum dolorem molestias aperiam at iste animi modi
+            ullam?
+            Molestias, illum dicta.</p>
+
+          <form id="bmiForm" class="bmi__input-group">
+
+            <input type="number" id="height" placeholder="your height" />
+            <label for="height">cm</label>
+
+            <input type="number" id="weight" placeholder="your weight" />
+            <label for="weight">kg</label>
+
+          </form>
+
+        </div>
+      </div>
+
+      <div class="bmi__img-wrapper">
+        <p class="bmi__img-wrapper-title">Your BMI</p>
+        <img src="/src/assets/images/bmi-index.jpg" class="bmi__img" alt="bmi image" />
+      </div>
+
+    </div>
+  </section>
+  <!-- BMI Calculator Section End Here -->
+
+  <!-- Trainers Section Start Here -->
+  <section id="trainers" class="trainers">
+    <div class="container">
+
+      <h2 class="trainers__title section-title">Our best trainers</h2>
+      <p class="trainers__subtitle text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis placeat,
+        totam laboriosam
+        ut
+        culpa impedit quis,
+        dolores ipsum maxime minus ea inventore consectetur est amet eum quia ipsam porro fugiat?</p>
+
+      <div class="trainers__cards-wrapper">
+
+        <div class="trainers__card">
+          <div class="trainers__card-border"></div>
+          <div class="trainers__img-wrapper">
+            <img src="/src/assets/images/trainer1.jpg" alt="Trainer 1">
+          </div>
+          <div class="trainers__info">
+            <h3 class="trainers__name">Jane Doe</h3>
+            <p class="trainers__role">Cardio Trainer</p>
+          </div>
+        </div>
+
+        <div class="trainers__card">
+          <div class="trainers__card-border"></div>
+          <div class="trainers__img-wrapper">
+            <img src="/src/assets/images/trainer2.jpg" alt="Trainer 2">
+          </div>
+          <div class="trainers__info">
+            <h3 class="trainers__name">John Wick</h3>
+            <p class="trainers__role">Strength Coach</p>
+          </div>
+        </div>
+
+        <div class="trainers__card">
+          <div class="trainers__card-border"></div>
+          <div class="trainers__img-wrapper">
+            <img src="/src/assets/images/trainer3.jpg" alt="Trainer 3">
+          </div>
+          <div class="trainers__info">
+            <h3 class="trainers__name">Emily Rose</h3>
+            <p class="trainers__role">Yoga Trainer</p>
+          </div>
+        </div>
+
+
+      </div>
+      <!--//cards wrapper -->
+
+    </div> <!--//container -->
+  </section>
+
+  <section id="products" class="products">
+    <div class="container">
+
+      <h2 class="products__title section-title">purchase from us</h2>
+      <p class="products__subtitle text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis placeat,
+        totam laboriosam
+        ut
+        culpa impedit quis,
+        dolores ipsum maxime minus ea inventore consectetur est amet eum quia ipsam porro fugiat?</p>
+
+      <div class="products__cards-wrapper">
+
+        <!-- Card 1 -->
+        <div class="products__card">
+          <div class="products__img-wrapper">
+            <img src="/src/assets/images/purchase1.jpg" alt="Product 1">
+          </div>
+          <div class="products__info">
+            <h3 class="products__name">Kettlebell / 5kg</h3>
+            <p class="products__price"><span class="old-price">$89.99</span> / <span class="new-price">59,99</span></p>
+            <button class="products__btn">
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span class="btn-text">Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="products__card">
+          <div class="products__img-wrapper">
+            <img src="/src/assets/images/purchase2.jpg" alt="Product 2">
+          </div>
+          <div class="products__info">
+            <h3 class="products__name">Treadmill</h3>
+            <p class="products__price"><span class="old-price">$899.99</span> / <span class="new-price">599,99</span>
+            </p>
+            <button class="products__btn">
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span class="btn-text">Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="products__card">
+          <div class="products__img-wrapper">
+            <img src="/src/assets/images/purchase3.jpg" alt="Product 3">
+          </div>
+          <div class="products__info">
+            <h3 class="products__name">Adjustable Dumbell</h3>
+            <p class="products__price"><span class="old-price">$89.99</span> / <span class="new-price">59,99</span></p>
+            <button class="products__btn">
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span class="btn-text">Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="products__card">
+          <div class="products__img-wrapper">
+            <img src="/src/assets/images/purchase4.jpg" alt="Product 4">
+          </div>
+          <div class="products__info">
+            <h3 class="products__name">Kettlebell / 3kg</h3>
+            <p class="products__price"><span class="old-price">$89.99</span> / <span class="new-price">59,99</span></p>
+            <button class="products__btn">
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span class="btn-text">Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
 
   <section id="reviews" class="reviews"></section>
 

@@ -36,6 +36,11 @@ $fs-2xl: clamp(1.3rem, 2.2vw, 1.875rem);
 $fs-3xl: clamp(1.8rem, 3vw, 2.5rem);
 $fs-4xl: clamp(2.25rem, 4vw, 3rem);
 
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
 /* ---- Border Radius ---- */
 $radius-sm: 0.375rem; // 6px
 $radius-md: 0.625rem; // 10px

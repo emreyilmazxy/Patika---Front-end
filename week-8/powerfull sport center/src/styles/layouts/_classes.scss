@@ -10,6 +10,7 @@
 
         padding-inline: $space-24;
 
+        //gri background shape
         &::after {
             content: '';
             position: absolute;
@@ -23,7 +24,7 @@
         }
     }
 
-    //   paragraphs 
+    //  subtitle paragraphs 
     &__description {
         font-size: $fs-xl;
     }
@@ -48,13 +49,18 @@
         @include flex-between;
         gap: $space-64;
         margin-top: $space-48;
+        flex-wrap: wrap;
 
+        .classes__content-wrapper {
+            max-width: 31.25rem;
+        }
 
         &-title {
             margin-bottom: $space-16;
             font-size: $fs-3xl;
         }
 
+        //paragraph styles
         &-description {
             font-size: $fs-lg;
             color: $text-secondary;
