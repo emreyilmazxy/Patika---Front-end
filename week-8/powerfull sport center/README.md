@@ -11,11 +11,7 @@ Modern ve responsive bir fitness/spor salonu web sitesi. Vite, TypeScript ve SCS
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
 </p>
 
-<p>
-  <a href="https://fluffy-bienenstitch-12c316.netlify.app/" target="_blank">
-    <img src="https://img.shields.io/badge/🚀_Live_Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" />
-  </a>
-</p>
+
 
 ## 📋 İçindekiler
 
