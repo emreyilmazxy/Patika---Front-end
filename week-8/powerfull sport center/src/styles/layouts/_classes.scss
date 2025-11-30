@@ -10,7 +10,7 @@
 
         padding-inline: $space-24;
 
-        //gri background shape
+        // Gray background shape
         &::after {
             content: '';
             position: absolute;
@@ -92,4 +92,61 @@
         }
     }
 
+}
+
+
+//------------------- Mobile Styles ------------------ //
+@media (max-width: 576px) {
+    .classes {
+
+        &__title {
+            font-size: $fs-3xl;
+            font-weight: $fw-extra-bold;
+        }
+
+        &__buttons-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            gap: $space-16;
+            max-width: 360px;
+            margin: $space-64 auto 0;
+
+            button {
+                padding: $space-12 $space-24;
+                font-size: $fs-2xl;
+                font-weight: 900;
+            }
+
+            button:nth-child(1) {
+                margin-left: $space-32;
+            }
+        }
+
+        &__content-description {
+            font-weight: $fw-extra-bold;
+            word-spacing: 0px;
+
+            &--flex {
+                font-weight: $fw-extra-bold;
+                word-spacing: 0px;
+            }
+        }
+
+        &__content {
+            padding: 0;
+        }
+
+        &__img-wrapper {
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            width: 100vw;
+            max-width: 100vw;
+
+
+        }
+    }
 }

@@ -25,8 +25,38 @@
 
         &-text {
             font-size: $fs-lg;
-            font-weight: 700;
-            color: $text-primary;
+            font-weight: $fw-extra-bold;
+            color: black;
+        }
+    }
+}
+
+//------------------- Mobile Styles ------------------ //
+@media (max-width: 576px) {
+    .stats {
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $space-24;
+        }
+
+        &__item {
+
+            width: 100%;
+            max-width: 320px;
+
+            &-number {
+                font-size: $fs-4xl;
+                font-weight: $fw-extra-bold;
+            }
+
+            &-text {
+                font-size: $fs-3xl;
+                font-weight: $fw-extra-bold;
+                color: $color-gray-900;
+            }
         }
     }
 }

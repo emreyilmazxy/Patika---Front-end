@@ -21,3 +21,21 @@
         margin-inline: auto;
     }
 }
+
+//------------------- Mobile Styles ------------------ //
+@media (max-width: 576px) {
+    .trainers {
+
+        &__title {
+            font-size: $fs-2xl;
+            font-weight: $fw-extra-bold;
+
+        }
+
+        &__subtitle {
+            font-weight: $fw-extra-bold;
+            text-align: center;
+
+        }
+    }
+}

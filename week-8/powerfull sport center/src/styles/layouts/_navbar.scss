@@ -13,8 +13,17 @@
     .container {
         @include flex-between;
 
-        span {
+        .navbar__hamburger {
             display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+
+            span {
+                font-size: $fs-3xl;
+                color: $text-white !important;
+            }
         }
     }
 
@@ -23,7 +32,7 @@
         height: auto;
 
         img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
         }
     }
@@ -49,5 +58,59 @@
         background-color: #355592;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: $transition-slow;
+    }
+}
+
+/* Mobile Navbar */
+@media (max-width: 576px) {
+    .navbar {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: transparent !important;
+        box-shadow: none;
+        padding: 0;
+        z-index: 999;
+
+        // Hide nav links
+        &__links {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100vh;
+            background: $color-primary-dark;
+            padding: 2rem;
+            flex-direction: column;
+            gap: 2.5rem;
+            z-index: 9998;
+
+            transform: translateX(-100%);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            transition: transform .35s ease, opacity .35s ease;
+        }
+
+        &__links--active {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        // Show hamburger menu
+        .container .navbar__hamburger {
+            display: block;
+            cursor: pointer;
+
+            span {
+                font-size: 3.5rem;
+                color: $text-white;
+            }
+        }
     }
 }

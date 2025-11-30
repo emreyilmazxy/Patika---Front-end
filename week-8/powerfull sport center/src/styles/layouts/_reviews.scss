@@ -68,3 +68,19 @@
     }
 
 }
+
+//------------------- Mobile Styles ------------------ //
+@media (max-width: 576px) {
+    .reviews {
+
+        &__title {
+            font-size: $fs-3xl;
+            font-weight: $fw-extra-bold;
+        }
+
+        &__subtitle {
+            font-size: $fs-lg;
+            font-weight: $fw-extra-bold;
+        }
+    }
+}

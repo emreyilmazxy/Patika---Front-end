@@ -26,6 +26,7 @@
     &__title {
         @include flex-column;
         font-size: clamp(2rem, 7vw, 6rem);
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
     }
 
     //paragraph styles
@@ -44,6 +45,59 @@
 
         a {
             border-radius: $radius-sm;
+        }
+    }
+}
+
+//------------------- Mobile Styles ------------------ //
+
+@media (max-width: 576px) {
+    .hero {
+        .container {
+            margin-top: $space-48;
+
+        }
+
+        &__title {
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: clamp(1.5rem, 10vw, 3rem);
+            ;
+            font-weight: $fw-extra-bold;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+
+            span {
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    margin-right: 0.3em;
+                }
+            }
+        }
+
+        &__description {
+            font-size: $fs-base;
+            margin-top: $space-12;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        &__buttons-wrapper {
+            flex-direction: column;
+            gap: $space-8;
+            width: 100%;
+
+            a {
+                width: 100%;
+                justify-content: flex-start;
+                padding: $space-12 $space-16;
+                font-weight: $fw-bold;
+                font-size: $fs-2xl;
+            }
+
+            a:last-child {
+                background-color: rgba(0, 0, 0, 0.7);
+                ;
+            }
         }
     }
 }

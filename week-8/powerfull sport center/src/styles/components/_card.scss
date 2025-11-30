@@ -33,26 +33,24 @@
     &::before {
         content: "";
         position: absolute;
-        top: -0.5rem;
+        top: -.8rem;
         left: 50%;
         transform: translateX(-50%);
         width: 5.625rem;
-        height: 0.3125rem;
+        height: .6125rem;
         background: #234c8a;
-        border-radius: 0.1875rem;
     }
 
     /* Bottom border (animated width) */
     &::after {
         content: "";
         position: absolute;
-        bottom: -0.5rem;
+        bottom: -0.8rem;
         left: 50%;
         transform: translateX(-50%);
-        width: 2.8125rem;
-        height: 0.3125rem;
+        width: 6.8125rem;
+        height: 0.6125rem;
         background: $color-primary;
-        border-radius: 0.1875rem;
         transition: width $transition-base;
     }
 }
@@ -60,38 +58,37 @@
 /* Side borders: left & right */
 .trainers__card {
 
-    /* Left border */
+    /* Left & Right borders - grow downward only */
     &::before,
     &::after {
         content: "";
         position: absolute;
-        top: 50%;
-        width: 0.3125rem;
-        height: 2.8125rem;
+        top: 45%;
+        width: 0.6125rem;
+        height: 6.8125rem;
         background: $color-primary;
-        border-radius: 0.1875rem;
-        transform: translateY(-50%);
+        transform-origin: top center;
         transition: height $transition-base;
     }
 
     &::before {
-        left: -0.5rem;
+        left: -0.8rem;
     }
 
     &::after {
-        right: -0.5rem;
+        right: -0.8rem;
     }
 }
 
 /* Hover effects for all border animations */
 .trainers__card:hover {
     .trainers__card-border::after {
-        width: 5.625rem;
+        width: 13.625rem;
     }
 
     &::before,
     &::after {
-        height: 5.625rem;
+        height: 10.625rem;
     }
 
     .trainers__info {

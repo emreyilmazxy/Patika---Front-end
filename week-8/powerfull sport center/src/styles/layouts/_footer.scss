@@ -60,3 +60,31 @@
         }
     }
 }
+
+/* ---------------- Mobile Styles ---------------- */
+@media (max-width: 576px) {
+    .footer {
+
+        &__bottom {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: $space-16;
+        }
+
+        &__links-group {
+            min-width: auto;
+            flex: 1;
+        }
+
+        &__group-title {
+            font-size: $fs-2xl;
+            font-weight: $fw-bold;
+        }
+
+        &__link {
+            font-size: $fs-2xl;
+            color: $text-white;
+            font-weight: $fw-bold;
+        }
+    }
+}

@@ -102,3 +102,31 @@
         }
     }
 }
+
+// ---------------- Mobile Responsive ----------------
+@media (max-width: 576px) {
+    .contact {
+
+        &__title {
+            font-size: $fs-3xl;
+            font-weight: $fw-extra-bold;
+        }
+
+        &__subtitle {
+            font-weight: $fw-extra-bold;
+        }
+
+        &__info-item {
+            font-size: $fs-xl;
+        }
+
+        &__form {
+            min-width: auto;
+            padding-right: $space-8;
+        }
+
+        &__map {
+            min-width: auto;
+        }
+    }
+}

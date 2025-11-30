@@ -10,3 +10,20 @@
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 }
+
+//------------------- Mobile Styles ------------------ //
+@media (max-width: 576px) {
+    .products {
+        padding: 2rem;
+
+        &__title {
+            font-size: $fs-2xl;
+            font-weight: $fw-extra-bold;
+        }
+
+        &__subtitle {
+            font-size: $fs-lg;
+            font-weight: $fw-extra-bold;
+        }
+    }
+}
