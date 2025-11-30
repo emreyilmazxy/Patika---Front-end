@@ -2,114 +2,110 @@
 @use '../utils/mixins' as *;
 
 // Trainer card component with animated borders and info panel
+/* -------------------------------------------------
+   TRAINERS CARD — BASE
+--------------------------------------------------*/
 .trainers__card {
     position: relative;
-    border-radius: $radius-lg;
-    border: 0.1875rem solid #e1a937; // Golden border
+    border: 3px solid #e1a937;
     background: $color-white;
+    border-radius: $radius-lg;
     cursor: pointer;
     transition: transform $transition-base;
 
-    // Hover state: lift card and show info
+    /* Hover → global card animation */
     &:hover {
         transform: translateY(-0.5rem);
-
-        .trainers__info {
-            opacity: 1;
-            transform: translate(-50%, 0);
-        }
-
-        .trainers__card-border {
-            &::after {
-                width: 5.625rem; // Expand bottom border
-            }
-        }
-
-        &::before {
-            height: 5.625rem; // Expand left border
-        }
-
-        &::after {
-            height: 5.625rem; // Expand right border
-        }
     }
+}
 
-    // Top border line (static, no animation)
-    .trainers__card-border::before {
-        content: '';
+/* -------------------------------------------------
+   BORDER LINES (TOP / BOTTOM / LEFT / RIGHT)
+--------------------------------------------------*/
+
+/* Top & bottom border container */
+.trainers__card-border {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    /* Top border (static) */
+    &::before {
+        content: "";
         position: absolute;
         top: -0.5rem;
         left: 50%;
         transform: translateX(-50%);
         width: 5.625rem;
         height: 0.3125rem;
-        background: #234c8a; // Navy blue
+        background: #234c8a;
         border-radius: 0.1875rem;
-        z-index: 2;
     }
 
-    // Bottom border line (animated on hover)
-    .trainers__card-border::after {
-        content: '';
+    /* Bottom border (animated width) */
+    &::after {
+        content: "";
         position: absolute;
         bottom: -0.5rem;
         left: 50%;
         transform: translateX(-50%);
         width: 2.8125rem;
         height: 0.3125rem;
-        background: #234c8a;
+        background: $color-primary;
         border-radius: 0.1875rem;
         transition: width $transition-base;
-        z-index: 2;
     }
+}
 
-    // Left border line (animated on hover)
-    &::before {
-        content: '';
-        position: absolute;
-        left: -0.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 0.3125rem;
-        height: 2.8125rem;
-        background: #234c8a;
-        border-radius: 0.1875rem;
-        transition: height $transition-base;
-        z-index: 2;
-    }
+/* Side borders: left & right */
+.trainers__card {
 
-    // Right border line (animated on hover)
+    /* Left border */
+    &::before,
     &::after {
-        content: '';
+        content: "";
         position: absolute;
-        right: -0.5rem;
         top: 50%;
-        transform: translateY(-50%);
         width: 0.3125rem;
         height: 2.8125rem;
-        background: #234c8a;
+        background: $color-primary;
         border-radius: 0.1875rem;
+        transform: translateY(-50%);
         transition: height $transition-base;
-        z-index: 2;
+    }
+
+    &::before {
+        left: -0.5rem;
+    }
+
+    &::after {
+        right: -0.5rem;
     }
 }
 
-// Border container for pseudo-elements
-.trainers__card-border {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
+/* Hover effects for all border animations */
+.trainers__card:hover {
+    .trainers__card-border::after {
+        width: 5.625rem;
+    }
+
+    &::before,
+    &::after {
+        height: 5.625rem;
+    }
+
+    .trainers__info {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
-// Image wrapper with aspect ratio
+/* -------------------------------------------------
+   IMAGE WRAPPER
+--------------------------------------------------*/
 .trainers__img-wrapper {
-    position: relative;
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 3/4;
     overflow: hidden;
     border-radius: $radius-lg;
 
@@ -117,53 +113,47 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
     }
 }
 
-// Info panel with custom clip-path shape (slides up on hover)
+/* -------------------------------------------------
+   INFO PANEL (SLIDE-UP REVEAL)
+--------------------------------------------------*/
 .trainers__info {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 100%); // Hidden by default
     width: 85%;
-    background: #234c8a;
     padding: $space-32 $space-20;
-    text-align: center;
+    background: #234c8a;
+    clip-path: polygon(0% 20%, 10% 20%, 10% 8%, 90% 8%, 90% 20%,
+            100% 20%, 100% 80%, 90% 80%, 90% 92%,
+            10% 92%, 10% 80%, 0% 80%);
+
     opacity: 0;
+    transform: translate(-50%, 100%);
     transition: all $transition-base;
     z-index: 3;
-    // Custom polygon creates narrow notches at top and bottom center
-    clip-path: polygon(0% 20%,
-            10% 20%,
-            10% 8%,
-            90% 8%,
-            90% 20%,
-            100% 20%,
-            100% 80%,
-            90% 80%,
-            90% 92%,
-            10% 92%,
-            10% 80%,
-            0% 80%);
+    pointer-events: none;
 }
 
-// Trainer name styling
+/* -------------------------------------------------
+   TEXT STYLES
+--------------------------------------------------*/
 .trainers__name {
     color: $color-white;
     font-size: $fs-xl;
     font-weight: 700;
     margin-bottom: $space-8;
+    text-align: center;
 }
 
-// Trainer role/title styling
 .trainers__role {
     color: $color-white;
-    font-size: $fs-base;
-    font-weight: 400;
     opacity: 0.9;
+    text-align: center;
 }
+
 
 //   product card component -------------------------------------------------------
 
@@ -248,7 +238,7 @@
         background: transparent;
         border: none;
         display: flex;
-        flex-direction: row; // Horizontal layout
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: $space-8;
@@ -264,12 +254,12 @@
             font-size: 26px;
             transition: transform 0.2s ease;
             position: absolute;
-            left: 0; // Icon on the left
+            left: 0;
         }
 
         .btn-text {
             flex: 1;
-            text-align: center; // Text centered
+            text-align: center;
         }
 
         &:hover {

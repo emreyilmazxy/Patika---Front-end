@@ -8,6 +8,7 @@
     height: $navbar-height;
     background-color: transparent;
     color: $text-white;
+    z-index: 100;
 
     .container {
         @include flex-between;

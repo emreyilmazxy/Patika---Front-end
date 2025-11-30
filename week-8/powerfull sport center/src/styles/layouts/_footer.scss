@@ -1,1 +1,62 @@
+@use '../utils/variables' as *;
 
+.footer {
+    background-color: $color-primary;
+    padding: 1rem 0;
+    color: $text-white;
+
+    /* Top section */
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        margin-bottom: 4rem;
+    }
+
+    &__logo {
+        width: 250px;
+    }
+
+    &__description {
+        max-width: 100%;
+        margin: 0;
+        text-align: left;
+        line-height: 1.6;
+        opacity: 0.85;
+        color: $color-white;
+    }
+
+    /* Bottom section with link groups */
+    &__bottom {
+        display: flex;
+        justify-content: center;
+        gap: 20rem;
+    }
+
+    &__links-group {
+        min-width: 180px;
+    }
+
+    &__group-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__link {
+        color: $text-white;
+        opacity: 0.8;
+        transition: 0.2s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

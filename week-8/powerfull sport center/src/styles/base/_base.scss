@@ -28,11 +28,8 @@ h2 {
 
 p {
     color: $text-primary;
-    margin-inline: auto;
-    font-size: 1rem;
-    line-height: 1.6;
-    font-family: 'Inter', sans-serif;
     font-size: $fs-base;
     line-height: 1.7;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
