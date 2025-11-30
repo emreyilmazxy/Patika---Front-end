@@ -169,15 +169,14 @@ powerfull-sport-center/
 
 ## 📱 Responsive Tasarım
 
-Proje mobil öncelikli (mobile-first) yaklaşımla geliştirilmiştir.
+> ⚠️ **Not:** Bu proje sadece **Desktop** ve **Mobile (576px)** görünümleri için tasarlanmıştır. Tablet boyutları için ayrı bir breakpoint bulunmamaktadır.
 
-### Breakpoints
+### Desteklenen Görünümler
 
-| Cihaz | Genişlik |
-|-------|----------|
-| Mobile | < 576px |
-| Tablet | 576px - 992px |
-| Desktop | > 992px |
+| Görünüm | Genişlik |
+|---------|----------|
+| Desktop | > 576px |
+| Mobile | ≤ 576px |
 
 ### Mobil Özellikler
 
