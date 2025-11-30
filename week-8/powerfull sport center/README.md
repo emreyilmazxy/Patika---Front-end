@@ -2,6 +2,8 @@
 
 Modern ve responsive bir fitness/spor salonu web sitesi. Vite, TypeScript ve SCSS kullanılarak geliştirilmiştir.
 
+🔗 **[Live Demo](https://fluffy-bienenstitch-12c316.netlify.app/)**
+
 <p>
   <img src="https://img.shields.io/badge/Vite-7.2.4-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
   <img src="https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
@@ -9,10 +11,16 @@ Modern ve responsive bir fitness/spor salonu web sitesi. Vite, TypeScript ve SCS
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
 </p>
 
+<p>
+  <a href="https://fluffy-bienenstitch-12c316.netlify.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" />
+  </a>
+</p>
+
 ## 📋 İçindekiler
 
 - [Özellikler](#-özellikler)
-- [Demo](#-demo)
+- [Demo](https://fluffy-bienenstitch-12c316.netlify.app/)
 - [Kurulum](#-kurulum)
 - [Proje Yapısı](#-proje-yapısı)
 - [Teknolojiler](#-teknolojiler)
