@@ -1,7 +1,8 @@
-import yogaImage from "../assets/images/yoga.jpg";
-import groupImage from "../assets/images/group.webp";
-import stretchImage from "../assets/images/stret.jpg";
-import soloImage from "../assets/images/solo.jpg";
+import yogaImage from "../../assets/images/yoga.jpg";
+import groupImage from "../../assets/images/group.webp";
+import stretchImage from "../../assets/images/stret.webp";
+import soloImage from "../../assets/images/solo.jpg";
+
 
 export const CONTENT_MAP: Record<string, string> = {
   "yoga-btn": `
