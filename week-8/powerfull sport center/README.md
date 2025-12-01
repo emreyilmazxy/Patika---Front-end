@@ -2,6 +2,8 @@
 
 Modern ve responsive bir fitness/spor salonu web sitesi. Vite, TypeScript ve SCSS kullanılarak geliştirilmiştir.
 
+🔗 **[Live Demo](https://fluffy-bienenstitch-12c316.netlify.app/)**
+
 <p>
   <img src="https://img.shields.io/badge/Vite-7.2.4-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
   <img src="https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
@@ -9,10 +11,12 @@ Modern ve responsive bir fitness/spor salonu web sitesi. Vite, TypeScript ve SCS
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
 </p>
 
+
+
 ## 📋 İçindekiler
 
 - [Özellikler](#-özellikler)
-- [Demo](#-demo)
+- [Demo](https://fluffy-bienenstitch-12c316.netlify.app/)
 - [Kurulum](#-kurulum)
 - [Proje Yapısı](#-proje-yapısı)
 - [Teknolojiler](#-teknolojiler)
@@ -161,15 +165,14 @@ powerfull-sport-center/
 
 ## 📱 Responsive Tasarım
 
-Proje mobil öncelikli (mobile-first) yaklaşımla geliştirilmiştir.
+> ⚠️ **Not:** Bu proje sadece **Desktop** ve **Mobile (576px)** görünümleri için tasarlanmıştır. Tablet boyutları için ayrı bir breakpoint bulunmamaktadır.
 
-### Breakpoints
+### Desteklenen Görünümler
 
-| Cihaz | Genişlik |
-|-------|----------|
-| Mobile | < 576px |
-| Tablet | 576px - 992px |
-| Desktop | > 992px |
+| Görünüm | Genişlik |
+|---------|----------|
+| Desktop | > 576px |
+| Mobile | ≤ 576px |
 
 ### Mobil Özellikler
 
