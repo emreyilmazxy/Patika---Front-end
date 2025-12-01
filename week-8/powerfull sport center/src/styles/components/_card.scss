@@ -9,7 +9,7 @@
     position: relative;
     border: 3px solid #e1a937;
     background: $color-white;
-    border-radius: $radius-lg;
+    border-radius: $radius-md;
     cursor: pointer;
     transition: transform $transition-base;
 
@@ -104,7 +104,7 @@
     width: 100%;
     aspect-ratio: 3/4;
     overflow: hidden;
-    border-radius: $radius-lg;
+    border-radius: calc($radius-md + -2.8px);
 
     img {
         width: 100%;
