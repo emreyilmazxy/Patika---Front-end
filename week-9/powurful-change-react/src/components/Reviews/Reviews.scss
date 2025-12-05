@@ -1,0 +1,89 @@
+@use '../../styles/utils/mixins' as *;
+@use '../../styles/utils/variables' as *;
+
+.reviews {
+    &__content {
+        @include flex-between;
+        margin-top: $space-64;
+        gap: $space-48;
+        flex-wrap: wrap;
+    }
+
+    &__testimonials {
+        max-width: 32.5rem;
+    }
+
+    &__profile-wrapper {
+        @include flex-center;
+        justify-content: flex-start;
+    }
+
+    &__text-group {
+        @include flex-column;
+        gap: $space-4;
+        padding-left: $space-20;
+    }
+
+    &__role {
+        color: $text-secondary;
+        font-size: $fs-sm;
+    }
+
+    &__img-wrapper {
+        border-radius: $radius-round;
+        overflow: hidden;
+        width: $space-64;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        font-size: $fs-sm;
+        margin-top: $space-16;
+        padding: $space-16;
+        background-color: $color-primary;
+        color: $text-white;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            clip-path: polygon(100% 100%, 100% 0, 0 0);
+            top: 100%;
+            left: 0;
+            width: 12%;
+            height: 25%;
+            background-color: $color-primary-light;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            clip-path: polygon(0 100%, 0 0, 100% 0);
+            top: 100%;
+            right: 0;
+            width: 12%;
+            height: 25%;
+            background-color: $color-primary-light;
+        }
+    }
+}
+
+// Mobile Styles
+@media (max-width: 576px) {
+    .reviews {
+        &__title {
+            font-size: $fs-3xl;
+            font-weight: $fw-extra-bold;
+        }
+
+        &__subtitle {
+            font-size: $fs-lg;
+            font-weight: $fw-extra-bold;
+        }
+    }
+}

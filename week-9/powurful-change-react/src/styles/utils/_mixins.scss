@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+/* ---- Flex Helpers ---- */
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---- Grid Helpers ---- */
+@mixin grid-responsive($minWidth, $gap: 1rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($minWidth, 1fr));
+    gap: $gap;
+}
+
+/* ---- Button Mixin ---- */
+@mixin button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $btn-padding-y $btn-padding-x;
+    border-radius: $radius-sm;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $transition-base;
+}

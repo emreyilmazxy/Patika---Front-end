@@ -1,0 +1,135 @@
+@use '../../styles/utils/mixins' as *;
+@use '../../styles/utils/variables' as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $navbar-height;
+    background-color: transparent;
+    color: $text-white;
+    z-index: 100;
+    transition: background-color $transition-slow, box-shadow $transition-slow;
+
+    .container {
+        @include flex-between;
+        height: 100%;
+
+        .navbar__hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+
+            span {
+                font-size: $fs-3xl;
+                color: $text-white !important;
+            }
+        }
+    }
+
+    &__img-wrapper {
+        max-width: 220px;
+        height: auto;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__links {
+        @include flex-center;
+        gap: $space-32;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            a {
+                color: $text-white;
+                font-weight: 600;
+                transition: $transition-base;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    &--scrolled {
+        background-color: #355592;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: $transition-slow;
+    }
+
+    .close-icon {
+        display: none;
+    }
+}
+
+/* Mobile Navbar */
+@media (max-width: 576px) {
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: transparent !important;
+        box-shadow: none;
+        padding: 0;
+        z-index: 999;
+
+        // Hide nav links
+        &__links {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 100vh;
+            background: $color-primary-dark;
+            padding: 2rem;
+            padding-top: 4rem;
+            flex-direction: column;
+            gap: 2.5rem;
+            z-index: 9998;
+
+            transform: translateX(-100%);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            transition: transform .35s ease, opacity .35s ease;
+
+            .close-icon {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                cursor: pointer;
+                font-size: 2rem;
+                color: $text-white;
+            }
+        }
+
+        &__links--active {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        // Show hamburger menu
+        .container .navbar__hamburger {
+            display: block;
+            cursor: pointer;
+
+            span {
+                font-size: 3.5rem;
+                color: $text-white;
+            }
+        }
+    }
+}
