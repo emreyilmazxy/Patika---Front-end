@@ -2,9 +2,9 @@
 @use '../utils/mixins' as *;
 
 // Trainer card component with animated borders and info panel
-/* -------------------------------------------------
-   TRAINERS CARD — BASE
---------------------------------------------------*/
+
+//    TRAINERS CARD — BASE STYLE -------------------------------------------------------
+
 .trainers__card {
     position: relative;
     border: 3px solid #e1a937;
@@ -19,9 +19,9 @@
     }
 }
 
-/* -------------------------------------------------
-   BORDER LINES (TOP / BOTTOM / LEFT / RIGHT)
---------------------------------------------------*/
+
+//    BORDER LINES TOP / BOTTOM / LEFT / RIGHT
+
 
 /* Top & bottom border container */
 .trainers__card-border {
@@ -97,9 +97,8 @@
     }
 }
 
-/* -------------------------------------------------
-   IMAGE WRAPPER
---------------------------------------------------*/
+/ //    IMAGE WRAPPER
+
 .trainers__img-wrapper {
     width: 100%;
     aspect-ratio: 3/4;
@@ -113,9 +112,9 @@
     }
 }
 
-/* -------------------------------------------------
-   INFO PANEL (SLIDE-UP REVEAL)
---------------------------------------------------*/
+
+//    INFO PANEL (SLIDE-UP REVEAL)
+
 .trainers__info {
     position: absolute;
     bottom: 0;
@@ -134,9 +133,9 @@
     pointer-events: none;
 }
 
-/* -------------------------------------------------
-   TEXT STYLES
---------------------------------------------------*/
+
+//    TEXT STYLES
+
 .trainers__name {
     color: $color-white;
     font-size: $fs-xl;
