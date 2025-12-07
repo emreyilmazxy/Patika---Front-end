@@ -1,5 +1,5 @@
 
-import './App.css'
+import './app.css'
 import Player from './components/player/player'
 import dice1 from './assets/images/dice1.png';
 import dice2 from './assets/images/dice2.png';

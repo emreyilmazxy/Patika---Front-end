@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# 🎲 Dice Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Basit ve eğlenceli bir zar oyunu! Player 1 (sen) vs PC arasında geçen heyecanlı bir şans oyunu.
 
-Currently, two official plugins are available:
+## 🎮 Canlı Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 **[Oyunu Oyna](https://random-dice-gamee.netlify.app/)**
 
-## React Compiler
+## 📖 Oyun Kuralları
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Her iki oyuncu aynı anda zar atar
+- Yüksek zar değerine sahip olan kazanır
+- Eşitlik durumunda berabere!
 
-## Expanding the ESLint configuration
+## ✨ Özellikler
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🎲 Gerçekçi zar animasyonu (3 saniye)
+- ✏️ Kullanıcı adı değiştirme
+- 🎯 Anlık sonuç gösterimi
+- 📱 Responsive tasarım
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Teknolojiler
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React** - UI Framework
+- **TypeScript** - Type Safety
+- **Vite** - Build Tool
+- **CSS** - Styling
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Kurulum
+
+```bash
+# Repoyu klonla
+git clone https://github.com/emreyilmazxy/Dice-game.git
+
+# Klasöre gir
+cd Dice-game
+
+# Bağımlılıkları yükle
+npm install
+
+# Geliştirme sunucusunu başlat
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Proje Yapısı
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── assets/
+│   └── images/          # Zar görselleri
+├── components/
+│   ├── player/          # Oyuncu componenti
+│   └── gameTurnandWinner/  # Sonuç componenti
+├── App.tsx              # Ana component
+├── App.css              # Ana stiller
+└── main.tsx             # Giriş noktası
+```
+
+## 📝 Lisans
+
+MIT License
