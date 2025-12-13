@@ -1,6 +1,13 @@
 import './product-card.css'
 
-const ProductCard = ({ imgSrc, productName, price }) => {
+type ProductCardProps = {
+    imgSrc: string;
+    productName: string;
+    price: number;
+    handleBuy: () => void;
+}
+
+const ProductCard = ({ imgSrc, productName, price, handleBuy }: ProductCardProps) => {
     return (
         <div className='product-card'>
 
@@ -13,7 +20,7 @@ const ProductCard = ({ imgSrc, productName, price }) => {
             <div className='btn-input-group'>
                 <button className='sell-btn'>sell</button>
                 <input className='product-amount' type="number" />
-                <button className='buy-btn'>buy</button>
+                <button className='buy-btn' onClick={handleBuy}>buy</button>
             </div>
 
         </div>
