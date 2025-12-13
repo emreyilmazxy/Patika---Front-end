@@ -1,0 +1,76 @@
+/* card styles */
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem .5rem;
+}
+
+.product-img-wrapper {
+    width: 100%;
+    max-width: 10rem;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-inline: auto;
+}
+
+.product-price {
+    margin-bottom: 2rem;
+    color: #24C486;
+    font-weight: bold;
+}
+
+/* btn styles */
+.btn-input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sell-btn,
+.buy-btn {
+    padding: .5rem 2.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-amount {
+    max-width: 6rem;
+    padding: .5rem 1rem;
+}
+
+.product-amount::-webkit-inner-spin-button,
+.product-amount::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sell-btn {
+    background-color: #eceaea;
+    color: rgb(0, 0, 0);
+    cursor: not-allowed;
+}
+
+.sell-btn-useable {
+    /* for typescript event */
+    background-color: #F53B6E;
+    color: white;
+    cursor: pointer;
+}
+
+.buy-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.buy-btn:hover {
+    background-color: #27ae60;
+}
