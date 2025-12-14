@@ -2,7 +2,7 @@ import './App.css'
 import { ProductCard } from './components/product-cards'
 import { products } from './data/products'
 import billGates from './assets/images/billgates.jpg'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type PurchasedItems = {
   [productId: number]: number
@@ -10,7 +10,26 @@ type PurchasedItems = {
 
 function App() {
   const [beginningMoney, setBeginningMoney] = useState<number>(100000000000);
+  const [displayMoney, setDisplayMoney] = useState<number>(100000000000);
   const [purchasedItems, setPurchasedItems] = useState<PurchasedItems>({});
+
+  // Animated money decrease effect
+
+  useEffect(() => {
+    if (displayMoney === beginningMoney) return;
+
+    const difference = displayMoney - beginningMoney;
+    const step = Math.ceil(difference / 8); // 8 steps completion
+    const duration = 15; // Each step 15ms
+
+    const timer = setTimeout(() => {
+      if (displayMoney > beginningMoney) {
+        setDisplayMoney(prev => Math.max(beginningMoney, prev - step));
+      }
+    }, duration);
+
+    return () => clearTimeout(timer);
+  }, [displayMoney, beginningMoney]);
 
   // total spent calculation
   const totalSpent = Object.entries(purchasedItems).reduce((total, [productId, quantity]) => {
@@ -30,6 +49,16 @@ function App() {
     }
   };
 
+  const handleSell = (productId: number, price: number) => {
+    if (purchasedItems[productId] > 0) {
+      setBeginningMoney(prevMoney => prevMoney + price);
+      setPurchasedItems(prevItems => ({
+        ...prevItems,
+        [productId]: prevItems[productId] - 1
+      }));
+    }
+  };
+
   return (
     <div className="container" >
       {/* header billgates and title */}
@@ -43,7 +72,7 @@ function App() {
       </header>
 
       <aside className='money-bar'>
-        <p>${beginningMoney.toLocaleString("en-US")}</p>
+        <p>${displayMoney.toLocaleString("en-US")}</p>
       </aside>
 
       {/* header billgates and title END */}
@@ -58,8 +87,9 @@ function App() {
               imgSrc={product.image}
               productName={product.name}
               price={product.price}
+              quantity={purchasedItems[product.id] || 0}
               handleBuy={() => handleBuy(product.id, product.price)}
-
+              handleSell={() => handleSell(product.id, product.price)}
             />
           ))}
         </section>

@@ -70,11 +70,14 @@
     cursor: not-allowed;
 }
 
-.sell-btn-useable {
-    /* for typescript event */
+.sell-btn--active {
     background-color: #F53B6E;
     color: white;
     cursor: pointer;
+}
+
+.sell-btn--active:hover {
+    background-color: #d92d5a;
 }
 
 .buy-btn {
