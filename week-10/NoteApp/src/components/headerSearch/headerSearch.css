@@ -1,0 +1,27 @@
+/* // Note Header Styles */
+.note-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.note-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.note-header input {
+    padding: 4px 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.note-header input:focus {
+    outline: none;
+    border-color: #24C486;
+    box-shadow: 0 0 5px rgba(36, 196, 134, 0.5);
+}
